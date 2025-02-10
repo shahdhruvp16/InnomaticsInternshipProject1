@@ -1,0 +1,982 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: red;
+    color: white;
+    padding: 8px 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.top-bar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 250px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.navbar-nav a {
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/* Pay Button */
+.pay-btn {
+    background-color: black;
+    font-weight: bold;
+    padding: 8px 15px;
+}
+
+/* Hero Section */
+.hero {
+    margin-top: 20px;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Information Section */
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 50px 80px;
+    background-color: white;
+}
+
+/* Left Side Content - Smaller */
+.info-content {
+    width: 55%;
+    text-align: justify;
+}
+
+.info-content h2 {
+    font-size: 34px; /* Reduced size */
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.info-content h2 span {
+    color: red;
+}
+
+.info-content p {
+    font-size: 13px; /* Slightly smaller */
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.red-heading {
+    font-size: 16px; /* Adjusted */
+    font-weight: bold;
+    color: red;
+    margin-top: 15px;
+}
+
+.view-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 20px; /* Adjusted */
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.view-btn:hover {
+    background: darkred;
+}
+
+/* Right Side Content - Bigger Cards */
+.info-cards {
+    width: 55%;
+}
+
+.info-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #00008B;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+/* Cards Layout - 2 in a Row */
+.info-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 20px;
+}
+
+/* Card Styling - Icon Above Text */
+.info-card {
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 25px; /* Increased padding */
+    display: flex;
+    flex-direction: column; /* Stack icon and text */
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card i {
+    font-size: 40px; /* Increased icon size */
+    color: red;
+}
+
+.info-card h4 {
+    font-size: 18px; /* Slightly larger text */
+    font-weight: bold;
+    color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .info-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    .info-content, .info-cards {
+        width: 100%;
+    }
+
+    .info-container {
+        grid-template-columns: 1fr; /* Stack cards on small screens */
+    }
+}
+
+
+/* Register Button */
+.register-btn {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    background: red;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    transform: rotate(-90deg);
+    transform-origin: right top;
+    cursor: pointer;
+}
+
+/* Carousel Navigation */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .info-card {
+        text-align: left;
+    }
+}
+
+/* Trending Courses Section */
+.trending-courses {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.trending-courses h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+/* Course Container */
+.course-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Individual Course Card */
+.course-card {
+    background-color: #111;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 300px;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+}
+
+/* Course Image */
+.course-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Course Title */
+.course-card h3 {
+    font-size: 1.4rem;
+    margin: 15px 0;
+    color: #e63946;
+}
+
+/* Course Description */
+.course-card p {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+/* Read More Button */
+.read-more {
+    background-color: #e63946;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.read-more:hover {
+    background-color: #ff4d6d;
+}
+
+/* Section Styling */
+.training-section {
+    background-color: #fff;
+    padding: 50px 5%;
+}
+
+.training-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+/* Advantages Box */
+.advantages {
+    flex: 1;
+    min-width: 300px;
+    max-width: 50%;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.advantages h2 {
+    color: #d32f2f;
+    font-size: 22px;
+}
+
+.advantages ul {
+    list-style: none;
+    padding: 0;
+}
+
+.advantages li {
+    font-size: 16px;
+    margin: 10px 0;
+    padding-left: 5px;
+}
+
+/* Video Section */
+.video-section {
+    flex: 1;
+    min-width: 300px;
+    max-width: 45%;
+    text-align: center;
+}
+
+.video-section h2 {
+    font-size: 22px;
+    color: #000;
+}
+
+.video-container {
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 5px;
+}
+
+/* Watch More Videos Button */
+.watch-more-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #d32f2f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.watch-more-btn:hover {
+    background: #b71c1c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .training-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .advantages, .video-section {
+        max-width: 100%;
+    }
+}
+
+/* Main Section */
+.main-section {
+    padding: 50px;
+    background: white;
+}
+
+/* Centered Title */
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Bordered Button Box */
+.button-box {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    border: 3px solid #ddd;
+    padding: 15px;
+    border-radius: 50px; /* Oval Border */
+    max-width: 650px;
+    margin: auto;
+    background: white;
+}
+
+/* Oval Training Buttons */
+.training-btn {
+    border: none;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px; /* Oval Shape */
+    background: black;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Hover & Active Effect */
+.training-btn:hover {
+    background: red;
+}
+
+.training-btn.active {
+    background: red;
+}
+
+/* Content Section */
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 30px;
+    text-align: left;
+    flex-direction: row-reverse; /* Image Left, Text Right */
+}
+
+/* Right Text */
+.text-container {
+    width: 50%;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Left Image */
+.image-container {
+    width: 20%;
+    text-align: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-container,
+    .image-container {
+        width: 100%;
+    }
+}
+
+/* Experts Section */
+.experts-section {
+    background: black;
+    color: white;
+    padding: 40px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+/* Bold White Heading */
+.section-heading {
+    font-size: 24px;
+    flex-grow: 1;
+    margin-left: -200px;
+}
+
+/* Red Call Button */
+.call-button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right: 280px;
+    
+}
+
+.call-button:hover {
+    background: #cc0000;
+}
+
+
+/* Notification Icon */
+.notification {
+    background: white;
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+}
+
+.chat-button:hover {
+    background: #cc0000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experts-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
+
+/* Testimonial Section */
+.testimonial-section {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Testimonial Content */
+.testimonial {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Review Text */
+.review-text {
+    font-size: 1.2rem;
+    color: #555;
+    font-style: italic;
+}
+
+/* Reviewer Name */
+.reviewer-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #e63946;
+}
+
+/* Carousel Buttons */
+.carousel-control-prev, .carousel-control-next {
+    filter: invert(100%);
+}
+
+/* Success Stories Section */
+.success-stories {
+    padding: 50px;
+    background-color: white;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Carousel Container */
+.carousel {
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Student Card */
+.card {
+    min-width: 250px;
+    max-width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    margin: 0 15px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.company {
+    color: red;
+    font-weight: bold;
+}
+
+.message {
+    background-color: #ffe6e6;
+    color: red;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Carousel Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev { left: -50px; }
+.next { right: -50px; }
+
+.prev:hover, .next:hover {
+    background-color: darkred;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .prev, .next {
+        top: 80%;
+        left: 20px;
+        right: auto;
+    }
+
+    .next {
+        right: 20px;
+        left: auto;
+    }
+
+    .carousel-track {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Success Stories Section */
+.success-stories {
+    padding: 50px;
+    background-color: white;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 80%;
+    margin: auto;
+}
+
+/* Student Card */
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.company {
+    color: red;
+    font-weight: bold;
+}
+
+.message {
+    background-color: #ffe6e6;
+    color: red;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Blog Section */
+.blog-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.blog-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Blog Container */
+.blog-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Blog Card */
+.blog-card {
+    width: 300px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.blog-card:hover {
+    transform: scale(1.05);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 15px;
+    text-align: left;
+}
+
+.blog-content h3 {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.blog-content p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .blog-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-card {
+        width: 90%;
+    }
+}
+
+/* General Section Styles */
+.innomatics-section {
+    background-color: #000;
+    color: white;
+    padding: 50px 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Container for Responsive Layout */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Left Column: About Us */
+.about-us {
+    flex: 1;
+    min-width: 280px;
+    margin: 20px;
+}
+
+.about-us .logo {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+.about-us p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Social Media Icons */
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: red;
+}
+
+/* Middle Column: Courses */
+.courses {
+    flex: 1;
+    min-width: 280px;
+    margin: 20px;
+}
+
+.courses h2 {
+    font-size: 18px;
+    color: red;
+}
+
+.courses ul {
+    list-style: none;
+    padding: 0;
+}
+
+.courses ul li {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+/* Right Column: Contact */
+.contact {
+    flex: 1;
+    min-width: 280px;
+    margin: 20px;
+}
+
+.contact h2 {
+    font-size: 18px;
+    color: red;
+}
+
+.contact p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.contact i {
+    color: red;
+    margin-right: 8px;
+}
+
+.contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    color: red;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Copyright Section */
+.copyright {
+    text-align: center;
+    background-color: #111; /* Slightly darker */
+    padding: 10px;
+    font-size: 14px;
+}
+
